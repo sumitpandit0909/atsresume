@@ -65,7 +65,7 @@ vercel --prod
 
 ### Vercel Configuration (vercel.json)
 - **Frontend**: Built React app served from `dist/public/`
-- **Backend**: Serverless functions in `api/` directory
+- **Backend**: Serverless functions in `api/` directory with 30-second timeout
 - **Routes**: API calls routed to serverless functions, static files to frontend
 
 ### Build Process
