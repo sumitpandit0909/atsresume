@@ -16,9 +16,12 @@ Ensure your repository has the following structure:
 ```
 ClientSideResume/
 ├── api/                    # Serverless functions
-│   ├── ai-analyze.ts
-│   ├── rate-limit-status.ts
-│   ├── reset-rate-limit.ts
+│   ├── ai-analyze/
+│   │   └── index.ts
+│   ├── rate-limit-status/
+│   │   └── index.ts
+│   ├── reset-rate-limit/
+│   │   └── index.ts
 │   └── tsconfig.json
 ├── client/                 # React frontend
 ├── server/                 # Express backend (for development)
