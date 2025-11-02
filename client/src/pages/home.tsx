@@ -115,6 +115,15 @@ export default function Home() {
       if (data.success && data.analysis) {
         setAiAnalysisResult(data.analysis);
         setShowAIResults(true);
+        
+        // Dispatch rate limit info if available
+        if (data.rateLimitInfo) {
+          const rateLimitEvent = new CustomEvent('rateLimitUpdate', { 
+            detail: data.rateLimitInfo 
+          });
+          window.dispatchEvent(rateLimitEvent);
+        }
+        
         toast({
           title: "AI Analysis Complete",
           description: "Your resume has been analyzed with advanced AI insights.",

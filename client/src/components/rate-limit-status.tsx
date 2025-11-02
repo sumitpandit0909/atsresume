@@ -1,39 +1,69 @@
 import { useState, useEffect } from "react";
-import { Clock, AlertCircle } from "lucide-react";
+import { Clock } from "lucide-react";
 
 interface RateLimitStatusProps {
   className?: string;
 }
 
+interface RateLimitInfo {
+  remainingTime: number;
+  nextAvailable: string | null;
+  allowed: boolean;
+}
+
 export function RateLimitStatus({ className = "" }: RateLimitStatusProps) {
   const [remainingTime, setRemainingTime] = useState<number | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const checkRateLimitStatus = async () => {
-    try {
-      const response = await fetch("/api/rate-limit-status");
-      if (response.ok) {
-        const data = await response.json();
-        setRemainingTime(data.remainingTime);
-      }
-    } catch (error) {
-      console.error("Failed to check rate limit status:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   useEffect(() => {
-    checkRateLimitStatus();
-    
-    // Check status every 30 seconds
-    const interval = setInterval(checkRateLimitStatus, 30000);
-    return () => clearInterval(interval);
-  }, []);
+    // Check if we have rate limit info stored locally
+    const storedRateLimit = localStorage.getItem('rateLimitInfo');
+    if (storedRateLimit) {
+      try {
+        const rateLimitInfo: RateLimitInfo = JSON.parse(storedRateLimit);
+        const now = Date.now();
+        const nextAvailable = rateLimitInfo.nextAvailable ? new Date(rateLimitInfo.nextAvailable).getTime() : 0;
+        
+        if (nextAvailable > now) {
+          setRemainingTime(nextAvailable - now);
+        } else {
+          // Rate limit expired, clear storage
+          localStorage.removeItem('rateLimitInfo');
+          setRemainingTime(null);
+        }
+      } catch (error) {
+        console.error("Failed to parse stored rate limit info:", error);
+        localStorage.removeItem('rateLimitInfo');
+      }
+    }
 
-  if (isLoading) {
-    return null;
-  }
+    // Listen for rate limit updates from AI analysis
+    const handleRateLimitUpdate = (event: CustomEvent) => {
+      const rateLimitInfo: RateLimitInfo = event.detail;
+      if (rateLimitInfo && !rateLimitInfo.allowed && rateLimitInfo.remainingTime > 0) {
+        setRemainingTime(rateLimitInfo.remainingTime);
+        // Store in localStorage for persistence
+        localStorage.setItem('rateLimitInfo', JSON.stringify(rateLimitInfo));
+      }
+    };
+
+    // Add event listener
+    window.addEventListener('rateLimitUpdate', handleRateLimitUpdate as EventListener);
+
+    // Update timer every second
+    const interval = setInterval(() => {
+      if (remainingTime && remainingTime > 1000) {
+        setRemainingTime(remainingTime - 1000);
+      } else if (remainingTime && remainingTime <= 1000) {
+        setRemainingTime(null);
+        localStorage.removeItem('rateLimitInfo');
+      }
+    }, 1000);
+
+    return () => {
+      window.removeEventListener('rateLimitUpdate', handleRateLimitUpdate as EventListener);
+      clearInterval(interval);
+    };
+  }, [remainingTime]);
 
   if (!remainingTime || remainingTime <= 0) {
     return null;

@@ -134,6 +134,9 @@ class ServerlessRateLimiter {
   }
 }
 
+// Global rate limiter instance (shared across all serverless functions)
+// Note: In serverless environment, this is per-instance, not truly global
+// For production, consider using Redis or similar external storage
 const rateLimiter = new ServerlessRateLimiter();
 
 // Inline DeepSeek service for serverless environment
@@ -401,6 +404,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.json({
       success: true,
       analysis: analysisResult,
+      rateLimitInfo: {
+        remainingTime: rateLimitResult.remainingTime || 0,
+        nextAvailable: rateLimitResult.nextAvailable?.toISOString() || null,
+        allowed: rateLimitResult.allowed
+      }
     });
   } catch (error) {
     console.error("AI analysis route error:", error);
