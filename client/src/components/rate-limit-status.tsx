@@ -38,11 +38,15 @@ export function RateLimitStatus({ className = "" }: RateLimitStatusProps) {
 
     // Listen for rate limit updates from AI analysis
     const handleRateLimitUpdate = (event: CustomEvent) => {
+      console.log("📡 Rate limit event received:", event.detail);
       const rateLimitInfo: RateLimitInfo = event.detail;
       if (rateLimitInfo && !rateLimitInfo.allowed && rateLimitInfo.remainingTime > 0) {
+        console.log("⏰ Setting remaining time:", rateLimitInfo.remainingTime);
         setRemainingTime(rateLimitInfo.remainingTime);
         // Store in localStorage for persistence
         localStorage.setItem('rateLimitInfo', JSON.stringify(rateLimitInfo));
+      } else {
+        console.log("⚠️ Invalid rate limit info or already allowed");
       }
     };
 

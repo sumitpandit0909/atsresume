@@ -118,10 +118,13 @@ export default function Home() {
         
         // Dispatch rate limit info if available
         if (data.rateLimitInfo) {
+          console.log("📊 Rate limit info received:", data.rateLimitInfo);
           const rateLimitEvent = new CustomEvent('rateLimitUpdate', { 
             detail: data.rateLimitInfo 
           });
           window.dispatchEvent(rateLimitEvent);
+        } else {
+          console.log("⚠️ No rate limit info in response");
         }
         
         toast({

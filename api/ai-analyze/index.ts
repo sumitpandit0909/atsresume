@@ -401,14 +401,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Record successful analysis for rate limiting
     await rateLimiter.recordAnalysis(rateLimitResult.ip);
 
+    const rateLimitInfo = {
+      remainingTime: rateLimitResult.remainingTime || 0,
+      nextAvailable: rateLimitResult.nextAvailable?.toISOString() || null,
+      allowed: rateLimitResult.allowed
+    };
+
+    console.log("📊 Sending rate limit info:", rateLimitInfo);
+
     res.json({
       success: true,
       analysis: analysisResult,
-      rateLimitInfo: {
-        remainingTime: rateLimitResult.remainingTime || 0,
-        nextAvailable: rateLimitResult.nextAvailable?.toISOString() || null,
-        allowed: rateLimitResult.allowed
-      }
+      rateLimitInfo: rateLimitInfo
     });
   } catch (error) {
     console.error("AI analysis route error:", error);
