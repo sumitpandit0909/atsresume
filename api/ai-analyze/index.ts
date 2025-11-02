@@ -14,7 +14,7 @@ interface RateLimitData {
 class ServerlessRateLimiter {
   private rateLimitData: RateLimitData = {};
   private readonly COOLDOWN_HOURS = 1; // 1 hour cooldown
-  private readonly COOLDOWN_MS = this.COOLDOWN_HOURS * 60 * 60 * 1000;
+  public readonly COOLDOWN_MS = this.COOLDOWN_HOURS * 60 * 60 * 1000;
 
   constructor() {
     // Clean up old entries every 5 minutes
@@ -401,10 +401,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Record successful analysis for rate limiting
     await rateLimiter.recordAnalysis(rateLimitResult.ip);
 
+    // After recording, check the rate limit again to get the updated status
+    const updatedRateLimitResult = rateLimiter.checkRateLimit(req);
+    
     const rateLimitInfo = {
-      remainingTime: rateLimitResult.remainingTime || 0,
-      nextAvailable: rateLimitResult.nextAvailable?.toISOString() || null,
-      allowed: rateLimitResult.allowed
+      remainingTime: updatedRateLimitResult.remainingTime || rateLimiter.COOLDOWN_MS, // Show 1 hour cooldown after first analysis
+      nextAvailable: updatedRateLimitResult.nextAvailable?.toISOString() || new Date(Date.now() + rateLimiter.COOLDOWN_MS).toISOString(),
+      allowed: updatedRateLimitResult.allowed
     };
 
     console.log("📊 Sending rate limit info:", rateLimitInfo);
