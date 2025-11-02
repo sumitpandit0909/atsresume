@@ -104,6 +104,15 @@ export default function Home() {
         
         // Handle rate limit specifically
         if (response.status === 429 && errorData.type === "RATE_LIMIT") {
+          // Dispatch rate limit info to show timer
+          const rateLimitEvent = new CustomEvent('rateLimitUpdate', { 
+            detail: {
+              remainingTime: errorData.remainingTime || 0,
+              nextAvailable: errorData.nextAvailable || null,
+              allowed: false
+            }
+          });
+          window.dispatchEvent(rateLimitEvent);
           throw new Error(errorData.message || "Rate limit exceeded");
         }
         

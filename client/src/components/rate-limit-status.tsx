@@ -14,7 +14,37 @@ interface RateLimitInfo {
 export function RateLimitStatus({ className = "" }: RateLimitStatusProps) {
   const [remainingTime, setRemainingTime] = useState<number | null>(null);
 
+  const checkServerRateLimitStatus = async () => {
+    try {
+      const response = await fetch("/api/rate-limit-status");
+      if (response.ok) {
+        const data = await response.json();
+        console.log("🌐 Server rate limit status:", data);
+        
+        if (!data.allowed && data.remainingTime > 0) {
+          setRemainingTime(data.remainingTime);
+          // Store in localStorage for persistence
+          const rateLimitInfo: RateLimitInfo = {
+            remainingTime: data.remainingTime,
+            nextAvailable: data.nextAvailable,
+            allowed: data.allowed
+          };
+          localStorage.setItem('rateLimitInfo', JSON.stringify(rateLimitInfo));
+        } else if (data.allowed) {
+          // Rate limit expired, clear storage
+          setRemainingTime(null);
+          localStorage.removeItem('rateLimitInfo');
+        }
+      }
+    } catch (error) {
+      console.error("Failed to check server rate limit status:", error);
+    }
+  };
+
   useEffect(() => {
+    // Check server rate limit status on component mount
+    checkServerRateLimitStatus();
+
     // Check if we have rate limit info stored locally
     const storedRateLimit = localStorage.getItem('rateLimitInfo');
     if (storedRateLimit) {
