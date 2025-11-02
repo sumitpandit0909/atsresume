@@ -15,16 +15,16 @@ This guide will help you deploy your ClientSideResume application to Vercel usin
 Ensure your repository has the following structure:
 ```
 ClientSideResume/
-├── api/                    # Serverless functions
+├── api/                    # Self-contained serverless functions
 │   ├── ai-analyze/
-│   │   └── index.ts
+│   │   └── index.ts        # Complete AI analysis with rate limiting
 │   ├── rate-limit-status/
-│   │   └── index.ts
+│   │   └── index.ts        # Rate limit status check
 │   ├── reset-rate-limit/
-│   │   └── index.ts
+│   │   └── index.ts        # Rate limit reset (for testing)
 │   └── tsconfig.json
 ├── client/                 # React frontend
-├── server/                 # Express backend (for development)
+├── server/                 # Express backend (for development only)
 ├── shared/                 # Shared types
 ├── vercel.json            # Vercel configuration
 └── package.json           # Build scripts

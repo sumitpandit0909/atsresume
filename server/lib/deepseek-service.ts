@@ -1,6 +1,6 @@
 import type { AIAnalysisResult } from "@shared/schema";
 
-const DEEPSEEK_API_KEY = "sk-bdf489701de9456db33589432a13fadf";
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || "sk-bdf489701de9456db33589432a13fadf";
 const DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions";
 
 interface DeepSeekMessage {
