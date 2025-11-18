@@ -1,4 +1,5 @@
 import { Shield, Mail, FileText } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/footer";
 
@@ -11,7 +12,7 @@ export default function TermsConditions() {
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex h-14 lg:h-16 items-center justify-between px-4 lg:px-6">
           <div className="flex items-center gap-2 lg:gap-3">
-            <a href="/" className="flex items-center gap-2 lg:gap-3">
+            <Link href="/" className="flex items-center gap-2 lg:gap-3">
               <div className="flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg lg:rounded-xl">
                 <Shield className="w-4 h-4 lg:w-6 lg:h-6 text-white" />
               </div>
@@ -23,7 +24,7 @@ export default function TermsConditions() {
                   AI-Powered Career Optimization
                 </p>
               </div>
-            </a>
+            </Link>
           </div>
 
           <Button

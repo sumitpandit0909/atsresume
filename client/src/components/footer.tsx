@@ -1,4 +1,5 @@
 import { Shield, Mail, ExternalLink } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,12 +35,12 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a 
+                <Link 
                   href="/" 
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a 
@@ -50,20 +51,20 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/features" 
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/about" 
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,31 +74,31 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a 
+                <Link 
                   href="/privacy-policy" 
                   className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-1"
                 >
                   Privacy Policy
                   <ExternalLink className="w-3 h-3" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/terms-conditions" 
                   className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-1"
                 >
                   Terms & Conditions
                   <ExternalLink className="w-3 h-3" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/disclaimer" 
                   className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-1"
                 >
                   Disclaimer
                   <ExternalLink className="w-3 h-3" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -112,24 +113,24 @@ export default function Footer() {
               © {currentYear} ATS Resume Analyzer. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-gray-300 text-sm">
-              <a 
+              <Link 
                 href="/privacy-policy" 
                 className="hover:text-white transition-colors"
               >
                 Privacy
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/terms-conditions" 
                 className="hover:text-white transition-colors"
               >
                 Terms
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/disclaimer" 
                 className="hover:text-white transition-colors"
               >
                 Disclaimer
-              </a>
+              </Link>
             </div>
           </div>
         </div>
