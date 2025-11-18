@@ -2,11 +2,29 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { copyFileSync } from "fs";
+
+// Custom plugin to copy SEO files
+const copySEOFiles = () => {
+  return {
+    name: 'copy-seo-files',
+    writeBundle() {
+      try {
+        copyFileSync('public/sitemap.xml', 'dist/public/sitemap.xml');
+        copyFileSync('public/robots.txt', 'dist/public/robots.txt');
+        console.log('✅ SEO files copied to dist/public/');
+      } catch (error) {
+        console.warn('⚠️ Could not copy SEO files:', error);
+      }
+    }
+  };
+};
 
 export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
+    copySEOFiles(),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
