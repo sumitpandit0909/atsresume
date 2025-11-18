@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#shieldGradient)"/>
+  <path d="M16 6L8 10V16C8 21.5 12 24 16 26C20 24 24 21.5 24 16V10L16 6Z" fill="white" fill-opacity="0.9"/>
+  <path d="M16 22C18.2091 22 20 20.2091 20 18C20 15.7909 18.2091 14 16 14C13.7909 14 12 15.7909 12 18C12 20.2091 13.7909 22 16 22Z" fill="white" fill-opacity="0.9"/>
+  <path d="M16 19C16.5523 19 17 18.5523 17 18C17 17.4477 16.5523 17 16 17C15.4477 17 15 17.4477 15 18C15 18.5523 15.4477 19 16 19Z" fill="white" fill-opacity="0.9"/>
+</svg>
