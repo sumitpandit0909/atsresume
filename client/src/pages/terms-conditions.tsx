@@ -2,12 +2,19 @@ import { Shield, Mail, FileText } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/footer";
+import { MetaTags } from "@/components/meta-tags";
 
 export default function TermsConditions() {
   const currentYear = new Date().getFullYear();
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaTags
+        title="Terms & Conditions - ATS Score Checker Free"
+        description="Read our Terms & Conditions to understand the rules and guidelines for using our free ATS resume analyzer tool."
+        canonicalUrl="https://www.atsscorecheckerfree.com/terms-conditions"
+        keywords="terms and conditions, user agreement, ATS analyzer terms, legal terms, service agreement"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex h-14 lg:h-16 items-center justify-between px-4 lg:px-6">
