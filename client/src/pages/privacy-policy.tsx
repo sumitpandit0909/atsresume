@@ -2,12 +2,19 @@ import { Shield, Mail, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/footer";
+import { MetaTags } from "@/components/meta-tags";
 
 export default function PrivacyPolicy() {
   const currentYear = new Date().getFullYear();
 
   return (
     <div className="min-h-screen bg-background">
+      <MetaTags
+        title="Privacy Policy - ATS Score Checker Free"
+        description="Read our Privacy Policy to understand how we protect your data and ensure privacy when using our free ATS resume analyzer tool."
+        canonicalUrl="https://www.atsscorecheckerfree.com/privacy-policy"
+        keywords="privacy policy, data protection, resume privacy, ATS analyzer privacy, data security"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex h-14 lg:h-16 items-center justify-between px-4 lg:px-6">
