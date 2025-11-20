@@ -675,7 +675,7 @@ export default function Home() {
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-600">
-                  To <strong>enhance CV ATS score</strong> with our analyzer, simply upload your resume and review the detailed feedback. Our ATS analyzer identifies specific areas for improvement, including missing keywords, formatting issues, and structural problems. We provide concrete suggestions to optimize your resume for better ATS compatibility, helping you achieve that perfect ATS score that recruiters look for.
+                  To <strong><a href="https://enhancv.com/" target="_blank">enhance CV</a> ATS score</strong> with our analyzer, simply upload your resume and review the detailed feedback. Our ATS analyzer identifies specific areas for improvement, including missing keywords, formatting issues, and structural problems. We provide concrete suggestions to optimize your resume for better ATS compatibility, helping you achieve that perfect ATS score that recruiters look for.
                 </p>
               </AccordionContent>
             </AccordionItem>
