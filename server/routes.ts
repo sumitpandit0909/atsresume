@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { deepSeekService } from "./lib/deepseek-service";
 import { rateLimiter } from "./lib/rate-limiter";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // AI Analysis Route
@@ -109,6 +110,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
         details: error instanceof Error ? error.message : "Unknown error"
       });
     }
+  });
+
+  // SPA Route Handling - Serve index.html for all client-side routes
+  // This ensures search engines can access all pages without 404 errors
+  app.get([
+    "/",
+    "/features",
+    "/about",
+    "/privacy-policy", 
+    "/terms-conditions",
+    "/disclaimer"
+  ], (req, res) => {
+    res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
+  });
+
+  // Catch-all route for any other client-side routes
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
   });
 
   const httpServer = createServer(app);
