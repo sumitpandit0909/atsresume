@@ -9,6 +9,7 @@ import About from "@/pages/about";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import Disclaimer from "@/pages/disclaimer";
 import TermsConditions from "@/pages/terms-conditions";
+import Dmca from "@/pages/dmca";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimer" component={Disclaimer} />
       <Route path="/terms-conditions" component={TermsConditions} />
+      <Route path="/dmca" component={Dmca} />
       <Route component={NotFound} />
     </Switch>
   );

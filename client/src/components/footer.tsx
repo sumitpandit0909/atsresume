@@ -100,6 +100,15 @@ export default function Footer() {
                   <ExternalLink className="w-3 h-3" />
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/dmca" 
+                  className="text-gray-300 hover:text-white transition-colors text-sm flex items-center gap-1"
+                >
+                  DMCA Policy
+                  <ExternalLink className="w-3 h-3" />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -130,6 +139,12 @@ export default function Footer() {
                 className="hover:text-white transition-colors"
               >
                 Disclaimer
+              </Link>
+              <Link 
+                href="/dmca" 
+                className="hover:text-white transition-colors"
+              >
+                DMCA
               </Link>
             </div>
           </div>
