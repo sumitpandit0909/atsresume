@@ -112,23 +112,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // SPA Route Handling - Serve index.html for all client-side routes
-  // This ensures search engines can access all pages without 404 errors
-  app.get([
-    "/",
-    "/features",
-    "/about",
-    "/privacy-policy", 
-    "/terms-conditions",
-    "/disclaimer"
-  ], (req, res) => {
-    res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
-  });
-
-  // Catch-all route for any other client-side routes
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
-  });
 
   const httpServer = createServer(app);
 
