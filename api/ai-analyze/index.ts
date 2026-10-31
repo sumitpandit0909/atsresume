@@ -139,7 +139,7 @@ class ServerlessRateLimiter {
 // For production, consider using Redis or similar external storage
 const rateLimiter = new ServerlessRateLimiter();
 
-// Inline DeepSeek service for serverless environment
+// Inline OpenRouter AI service for serverless environment
 interface AIAnalysisResult {
   overallAssessment: string;
   contentQuality: {
@@ -160,12 +160,12 @@ interface AIAnalysisResult {
   summary: string;
 }
 
-interface DeepSeekMessage {
+interface AIMessage {
   role: "system" | "user" | "assistant";
   content: string;
 }
 
-interface DeepSeekResponse {
+interface AIResponse {
   choices: Array<{
     message: {
       content: string;
@@ -173,20 +173,28 @@ interface DeepSeekResponse {
   }>;
 }
 
-class DeepSeekService {
-  private DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || "sk-bdf489701de9456db33589432a13fadf";
-  private DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions";
+class OpenRouterService {
+  private OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+  private OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+  private OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "deepseek/deepseek-v4.1-flash-1017";
+  private SITE_URL = process.env.SITE_URL || "https://www.atsscorecheckerfree.com";
 
-  private async callDeepSeekAPI(messages: DeepSeekMessage[]): Promise<string> {
+  private async callOpenRouterAPI(messages: AIMessage[]): Promise<string> {
+    if (!this.OPENROUTER_API_KEY) {
+      throw new Error("OPENROUTER_API_KEY is not configured");
+    }
+
     try {
-      const response = await fetch(this.DEEPSEEK_API_URL, {
+      const response = await fetch(this.OPENROUTER_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${this.DEEPSEEK_API_KEY}`,
+          "Authorization": `Bearer ${this.OPENROUTER_API_KEY}`,
+          "HTTP-Referer": this.SITE_URL,
+          "X-Title": "ATS Resume Checker",
         },
         body: JSON.stringify({
-          model: "deepseek-chat",
+          model: this.OPENROUTER_MODEL,
           messages,
           temperature: 0.7,
           max_tokens: 4000,
@@ -194,18 +202,18 @@ class DeepSeekService {
       });
 
       if (!response.ok) {
-        throw new Error(`DeepSeek API error: ${response.status} ${response.statusText}`);
+        throw new Error(`OpenRouter API error: ${response.status} ${response.statusText}`);
       }
 
-      const data = await response.json() as DeepSeekResponse;
+      const data = await response.json() as AIResponse;
       
       if (!data.choices?.[0]?.message?.content) {
-        throw new Error("Invalid response format from DeepSeek API");
+        throw new Error("Invalid response format from OpenRouter API");
       }
 
       return data.choices[0].message.content;
     } catch (error) {
-      console.error("DeepSeek API call failed:", error);
+      console.error("OpenRouter API call failed:", error);
       throw new Error(`Failed to analyze resume with AI: ${error instanceof Error ? error.message : "Unknown error"}`);
     }
   }
@@ -246,13 +254,13 @@ Provide honest, constructive feedback that helps the candidate improve their res
 
 ${resumeText.substring(0, 12000)}`; // Limit text length to avoid token limits
 
-    const messages: DeepSeekMessage[] = [
+    const messages: AIMessage[] = [
       { role: "system", content: systemPrompt },
       { role: "user", content: userPrompt }
     ];
 
     try {
-      const aiResponse = await this.callDeepSeekAPI(messages);
+      const aiResponse = await this.callOpenRouterAPI(messages);
       
       // Parse the JSON response from AI
       let parsedResult;
@@ -290,7 +298,7 @@ ${resumeText.substring(0, 12000)}`; // Limit text length to avoid token limits
         summary: parsedResult.summary || "No summary provided"
       };
     } catch (error) {
-      console.error("DeepSeek analysis failed:", error);
+      console.error("AI analysis failed:", error);
       // Return a fallback analysis if AI fails
       return this.getFallbackAnalysis(resumeText);
     }
@@ -333,7 +341,7 @@ ${resumeText.substring(0, 12000)}`; // Limit text length to avoid token limits
   }
 }
 
-const deepSeekService = new DeepSeekService();
+const openRouterService = new OpenRouterService();
 
 // Main API handler
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -395,8 +403,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    // Analyze resume with DeepSeek AI
-    const analysisResult = await deepSeekService.analyzeResume(resumeText);
+    // Analyze resume with AI (OpenRouter)
+    const analysisResult = await openRouterService.analyzeResume(resumeText);
 
     // Record successful analysis for rate limiting
     await rateLimiter.recordAnalysis(rateLimitResult.ip);

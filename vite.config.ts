@@ -12,6 +12,7 @@ const copySEOFiles = () => {
       try {
         copyFileSync('public/sitemap.xml', 'dist/public/sitemap.xml');
         copyFileSync('public/robots.txt', 'dist/public/robots.txt');
+        copyFileSync('public/ads.txt', 'dist/public/ads.txt');
         console.log('✅ SEO files copied to dist/public/');
       } catch (error) {
         console.warn('⚠️ Could not copy SEO files:', error);

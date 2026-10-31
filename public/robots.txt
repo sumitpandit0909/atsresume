@@ -1,18 +1,5 @@
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://www.atsscorecheckerfree.com/sitemap.xml
-
-# Disallow admin and API endpoints
 Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
 
-# Allow all other pages
-Allow: /ats-score-checker-free
-Allow: /privacy-policy
-Allow: /terms-conditions
-Allow: /disclaimer
-
-
+Sitemap: https://www.atsscorecheckerfree.com/sitemap.xml

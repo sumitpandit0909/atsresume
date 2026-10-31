@@ -11,35 +11,42 @@ import express2 from "express";
 // server/routes.ts
 import { createServer } from "http";
 
-// server/lib/deepseek-service.ts
-var DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || "sk-bdf489701de9456db33589432a13fadf";
-var DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions";
-var DeepSeekService = class {
-  async callDeepSeekAPI(messages) {
+// server/lib/openrouter-service.ts
+var OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+var OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+var OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "deepseek/deepseek-v4.1-flash-1017";
+var SITE_URL = process.env.SITE_URL || "https://www.atsscorecheckerfree.com";
+var OpenRouterService = class {
+  async callOpenRouterAPI(messages) {
+    if (!OPENROUTER_API_KEY) {
+      throw new Error("OPENROUTER_API_KEY is not configured");
+    }
     try {
-      const response = await fetch(DEEPSEEK_API_URL, {
+      const response = await fetch(OPENROUTER_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${DEEPSEEK_API_KEY}`
+          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+          "HTTP-Referer": SITE_URL,
+          "X-Title": "ATS Resume Checker"
         },
         body: JSON.stringify({
-          model: "deepseek-chat",
+          model: OPENROUTER_MODEL,
           messages,
           temperature: 0.7,
           max_tokens: 4e3
         })
       });
       if (!response.ok) {
-        throw new Error(`DeepSeek API error: ${response.status} ${response.statusText}`);
+        throw new Error(`OpenRouter API error: ${response.status} ${response.statusText}`);
       }
       const data = await response.json();
       if (!data.choices?.[0]?.message?.content) {
-        throw new Error("Invalid response format from DeepSeek API");
+        throw new Error("Invalid response format from OpenRouter API");
       }
       return data.choices[0].message.content;
     } catch (error) {
-      console.error("DeepSeek API call failed:", error);
+      console.error("OpenRouter API call failed:", error);
       throw new Error(`Failed to analyze resume with AI: ${error instanceof Error ? error.message : "Unknown error"}`);
     }
   }
@@ -82,7 +89,7 @@ ${resumeText.substring(0, 12e3)}`;
       { role: "user", content: userPrompt }
     ];
     try {
-      const aiResponse = await this.callDeepSeekAPI(messages);
+      const aiResponse = await this.callOpenRouterAPI(messages);
       let parsedResult;
       try {
         const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
@@ -115,7 +122,7 @@ ${resumeText.substring(0, 12e3)}`;
         summary: parsedResult.summary || "No summary provided"
       };
     } catch (error) {
-      console.error("DeepSeek analysis failed:", error);
+      console.error("AI analysis failed:", error);
       return this.getFallbackAnalysis(resumeText);
     }
   }
@@ -153,7 +160,7 @@ ${resumeText.substring(0, 12e3)}`;
     };
   }
 };
-var deepSeekService = new DeepSeekService();
+var openRouterService = new OpenRouterService();
 
 // server/lib/rate-limiter.ts
 import fs from "fs/promises";
@@ -320,7 +327,7 @@ async function registerRoutes(app2) {
           error: "Resume text is too long. Please limit to 20,000 characters"
         });
       }
-      const analysisResult = await deepSeekService.analyzeResume(resumeText);
+      const analysisResult = await openRouterService.analyzeResume(resumeText);
       await rateLimiter.recordAnalysis(rateLimitResult.ip);
       res.json({
         success: true,
@@ -390,6 +397,7 @@ var copySEOFiles = () => {
       try {
         copyFileSync("public/sitemap.xml", "dist/public/sitemap.xml");
         copyFileSync("public/robots.txt", "dist/public/robots.txt");
+        copyFileSync("public/ads.txt", "dist/public/ads.txt");
         console.log("\u2705 SEO files copied to dist/public/");
       } catch (error) {
         console.warn("\u26A0\uFE0F Could not copy SEO files:", error);
@@ -449,6 +457,7 @@ async function setupVite(app2, server) {
     hmr: { server },
     allowedHosts: true
   };
+  console.log("viteConfig is:", vite_config_default);
   const vite = await createViteServer({
     ...vite_config_default,
     configFile: false,

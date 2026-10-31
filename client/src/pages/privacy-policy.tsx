@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
               We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
-              <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our service</li>
+              <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our service. If you choose the optional AI analysis, the text extracted from your resume is sent to our AI provider (OpenRouter) solely to generate your analysis.</li>
               <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights</li>
               <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
             </ul>
@@ -151,6 +151,19 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Cookies and Tracking Technologies</h2>
             <p className="text-gray-600 leading-relaxed">
               We use cookies and similar tracking technologies to track activity on our service and hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+            </p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Advertising (Google AdSense)</h3>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We use Google AdSense to display advertisements. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this site and/or other sites on the Internet.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>You may opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Ads Settings</a>.</li>
+              <li>You can also opt out of some third-party vendors' use of cookies for personalized advertising at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.aboutads.info</a>.</li>
+              <li>Learn more in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">How Google uses information from sites or apps that use its services</a>.</li>
+            </ul>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Analytics</h3>
+            <p className="text-gray-600 leading-relaxed">
+              We use Google Analytics to understand how visitors use the site (for example, pages visited and time on site). Google Analytics uses cookies and reports data in aggregated form. You can opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Analytics Opt-out Browser Add-on</a>.
             </p>
           </section>
 

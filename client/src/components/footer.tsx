@@ -66,6 +66,14 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  ATS Resume Guides
+                </Link>
+              </li>
             </ul>
           </div>
 

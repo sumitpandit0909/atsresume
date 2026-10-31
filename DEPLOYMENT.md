@@ -6,7 +6,7 @@ This guide will help you deploy your ClientSideResume application to Vercel usin
 
 - Vercel account (free tier available)
 - GitHub repository with your code
-- DeepSeek API key
+- OpenRouter API key (https://openrouter.ai/keys)
 
 ## Deployment Steps
 
@@ -34,7 +34,8 @@ ClientSideResume/
 
 In Vercel dashboard, set these environment variables:
 
-- `DEEPSEEK_API_KEY` - Your DeepSeek AI API key
+- `OPENROUTER_API_KEY` - Your OpenRouter API key
+- `OPENROUTER_MODEL` - Optional, defaults to `deepseek/deepseek-v4.1-flash-1017`
 - `NODE_ENV` - Set to "production"
 
 ### 3. Deploy to Vercel
@@ -103,7 +104,7 @@ npm run dev
 ### Common Issues
 
 1. **API Key Not Found**
-   - Ensure `DEEPSEEK_API_KEY` is set in Vercel environment variables
+   - Ensure `OPENROUTER_API_KEY` is set in Vercel environment variables
    - Check for typos in the variable name
 
 2. **Build Failures**

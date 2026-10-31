@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { deepSeekService } from "./lib/deepseek-service";
+import { openRouterService } from "./lib/openrouter-service";
 import { rateLimiter } from "./lib/rate-limiter";
 import path from "path";
 
@@ -46,8 +46,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // Analyze resume with DeepSeek AI
-      const analysisResult = await deepSeekService.analyzeResume(resumeText);
+      // Analyze resume with AI (OpenRouter)
+      const analysisResult = await openRouterService.analyzeResume(resumeText);
 
       // Record successful analysis for rate limiting
       await rateLimiter.recordAnalysis(rateLimitResult.ip);

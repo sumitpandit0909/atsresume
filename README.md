@@ -46,7 +46,7 @@ A modern, AI-powered resume analysis tool that helps job seekers optimize their 
 ### Backend
 - **Node.js** - Runtime environment
 - **Express** - Web framework
-- **DeepSeek AI** - AI analysis integration
+- **OpenRouter** (`deepseek/deepseek-v4.1-flash-1017`) - AI analysis integration
 - **File Processing** - PDF and DOCX parsing
 
 ### Development Tools
@@ -77,8 +77,8 @@ A modern, AI-powered resume analysis tool that helps job seekers optimize their 
 3. **Set up environment variables**
    ```bash
    # Create .env file in root directory
-   # Add your DeepSeek API key
-   DEEPSEEK_API_KEY=your_api_key_here
+   # Add your OpenRouter API key
+   OPENROUTER_API_KEY=your_api_key_here
    ```
 
 4. **Start development server**
@@ -162,7 +162,8 @@ Create a `.env` file in the root directory:
 
 ```env
 # AI Service Configuration
-DEEPSEEK_API_KEY=your_deepseek_api_key
+OPENROUTER_API_KEY=your_openrouter_api_key
+OPENROUTER_MODEL=deepseek/deepseek-v4.1-flash-1017  # optional override
 
 # Server Configuration
 PORT=3000
@@ -175,7 +176,7 @@ The application can be customized through:
 
 - **TailwindCSS**: Modify `tailwind.config.js` for styling
 - **Components**: Customize UI components in `client/src/components/`
-- **Analysis Logic**: Modify AI integration in `server/lib/deepseek-service.ts`
+- **Analysis Logic**: Modify AI integration in `server/lib/openrouter-service.ts`
 
 ## 🚀 Deployment
 
@@ -223,7 +224,7 @@ If you encounter any issues or have questions:
 
 ## 🙏 Acknowledgments
 
-- **DeepSeek AI** for providing the AI analysis capabilities
+- **OpenRouter** for providing the AI analysis capabilities
 - **React Community** for excellent documentation and tools
 - **TailwindCSS** for the utility-first CSS framework
 - **Vite** for the fast build tool and development experience

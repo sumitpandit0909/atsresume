@@ -600,21 +600,25 @@ export default function Home() {
               </ul>
             </div>
 
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">Success Stories: Real Results from Our Users</h3>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
-                <div className="text-gray-700">Average ATS score improvement after using our recommendations</div>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">3x</div>
-                <div className="text-gray-700">More interview callbacks for optimized resumes</div>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">94%</div>
-                <div className="text-gray-700">User satisfaction rate with our free ATS checker</div>
-              </div>
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">Learn More: ATS Resume Guides</h3>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <a href="/blog/ats-score-checker-what-your-score-means" className="block bg-white border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <div className="font-semibold text-gray-900 mb-2">ATS Score Checker: What Your Score Means</div>
+                <div className="text-gray-600 text-sm">What a good ATS score is, why tools disagree, and how to raise yours.</div>
+              </a>
+              <a href="/blog/how-ats-checker-reads-your-resume" className="block bg-white border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <div className="font-semibold text-gray-900 mb-2">How an ATS Checker Reads Your Resume</div>
+                <div className="text-gray-600 text-sm">Resume parsing explained, plus a 5-minute self-test.</div>
+              </a>
+              <a href="/blog/ats-resume-checker-formatting-rules" className="block bg-white border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <div className="font-semibold text-gray-900 mb-2">ATS Resume Checker: 12 Formatting Rules</div>
+                <div className="text-gray-600 text-sm">Layout, fonts, headings and dates that applicant tracking systems read cleanly.</div>
+              </a>
+              <a href="/blog/resume-score-checker-keyword-tailoring" className="block bg-white border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <div className="font-semibold text-gray-900 mb-2">Resume Score Checker Workflow</div>
+                <div className="text-gray-600 text-sm">Tailor your resume to any job description in about 30 minutes.</div>
+              </a>
             </div>
 
             <div className="bg-blue-600 text-white rounded-xl p-8 text-center mb-12">
@@ -649,7 +653,7 @@ export default function Home() {
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-600">
-                  Our <strong>free ATS score checker</strong> analyzes your resume using the same algorithms that major Applicant Tracking Systems use. When you upload your resume, our ATS analyzer evaluates formatting, keywords, structure, and content quality against industry standards. You'll receive an instant ATS resume score and specific recommendations to enhance your CV ATS score, making it more likely to pass through automated screening systems.
+                  Our <strong>free ATS score checker</strong> analyzes your resume against the factors that commonly cause problems in Applicant Tracking Systems, such as parsing, section structure and keywords. When you upload your resume, our ATS analyzer evaluates formatting, keywords, structure, and content quality against industry standards. You'll receive an instant ATS resume score and specific recommendations to enhance your CV ATS score, making it more likely to pass through automated screening systems.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -675,7 +679,7 @@ export default function Home() {
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-600">
-                  To <strong><a href="https://enhancv.com/" target="_blank">enhance CV</a> ATS score</strong> with our analyzer, simply upload your resume and review the detailed feedback. Our ATS analyzer identifies specific areas for improvement, including missing keywords, formatting issues, and structural problems. We provide concrete suggestions to optimize your resume for better ATS compatibility, helping you achieve that perfect ATS score that recruiters look for.
+                  To <strong>improve your CV ATS score</strong> with our analyzer, simply upload your resume and review the detailed feedback. Our ATS analyzer identifies specific areas for improvement, including missing keywords, formatting issues, and structural problems. We provide concrete suggestions to optimize your resume for better ATS compatibility, helping you achieve that perfect ATS score that recruiters look for.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -683,12 +687,12 @@ export default function Home() {
             <AccordionItem value="item-4" className="bg-white rounded-lg shadow-sm border border-gray-200">
               <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
                 <h3 className="text-xl font-semibold text-gray-900">
-                  What ATS resume score should I aim for with my perfect resume?
+                  What ATS resume score should I aim for?
                 </h3>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-600">
-                  For your <strong>my perfect resume ATS score</strong>, aim for 80-100 points. Our ATS analyzer considers scores in this range as excellent for ATS compatibility. A score above 80 indicates your resume is well-optimized for automated screening, while scores below 60 need significant improvement. Our free ATS score checker provides specific guidance to help you reach that perfect ATS resume score.
+                  For a strong <strong>ATS resume score</strong>, aim for 80-100 points. Our ATS analyzer considers scores in this range as excellent for ATS compatibility. A score above 80 indicates your resume is well-optimized for automated screening, while scores below 60 need significant improvement. Our free ATS score checker provides specific guidance to help you reach that perfect ATS resume score.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -696,12 +700,12 @@ export default function Home() {
             <AccordionItem value="item-5" className="bg-white rounded-lg shadow-sm border border-gray-200">
               <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
                 <h3 className="text-xl font-semibold text-gray-900">
-                  How does your ATS checker compare to 'My Perfect Resume' ATS checker?
+                  How is your ATS checker different from paid resume checkers?
                 </h3>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-600">
-                  Unlike the <strong>My Perfect Resume ATS checker</strong> which often requires payment for detailed analysis, our free ATS score checker provides comprehensive insights at no cost. Our ATS analyzer offers instant results, detailed category breakdowns, and specific improvement recommendations without any subscription fees. We focus purely on ATS optimization rather than resume building, making our analysis more targeted and effective for job seekers.
+                  Unlike many paid tools that lock detailed analysis behind a subscription, our free <strong>ATS checker</strong> provides comprehensive insights at no cost. Our ATS analyzer offers instant results, detailed category breakdowns, and specific improvement recommendations without any subscription fees. We focus purely on ATS optimization rather than resume building, making our analysis more targeted and effective for job seekers.
                 </p>
               </AccordionContent>
             </AccordionItem>
