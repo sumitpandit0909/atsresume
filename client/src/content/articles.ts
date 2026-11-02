@@ -27,6 +27,160 @@ export const AUTHOR = "ATS Score Checker Free Editorial Team";
 
 export const articles: Article[] = [
   {
+    slug: "resume-bullet-points-before-and-after-examples",
+    title: "How to Write Resume Bullet Points That Score Well: Before-and-After Examples by Role",
+    metaTitle: "Resume Bullet Points: Before-and-After Examples That Score Well",
+    description:
+      "Low content score on a resume score checker? Learn a simple bullet point formula, see before-and-after examples for 8 roles, and find results to quote even without obvious numbers.",
+    keywords: "resume score checker, resume bullet points, improve resume score, ats checker, resume achievements examples",
+    published: "2026-11-02",
+    updated: "2026-11-02",
+    readMinutes: 9,
+    excerpt:
+      "Your layout is clean but your resume score is still low? The problem is often your bullet points. Here is how to rewrite them, with examples for eight roles.",
+    faq: [
+      {
+        q: "How many bullet points should each job have?",
+        a: "As a guide, use 4 to 6 for your most recent or most relevant role and 2 to 4 for older ones. Older roles can be shorter because recruiters focus on recent experience.",
+      },
+      {
+        q: "How long should a resume bullet point be?",
+        a: "Aim for one to two lines. If a bullet runs to three lines, it usually holds two achievements and reads better when split.",
+      },
+      {
+        q: "What if I do not have any numbers to include?",
+        a: "Use honest scope instead: team size, number of clients, frequency, or a before-and-after change. A careful estimate is fine if you can explain how you reached it in an interview, but never invent a figure.",
+      },
+      {
+        q: "Should resume bullet points start with a verb?",
+        a: "Yes. Starting with a specific past-tense verb, or present tense for your current role, keeps bullets short and makes your contribution clear. Avoid openers such as \"Responsible for\" or \"Helped with\".",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "You have fixed the layout, your headings are standard, and the file parses cleanly. Yet the **resume score checker** still marks your content as weak. In most cases the cause is the bullet points. They describe what the job was, not what you achieved in it. This guide shows you how to rewrite them, using a simple formula and before-and-after examples for eight roles.",
+      },
+      {
+        type: "p",
+        text: "If you have not checked your formatting yet, start with our [12 ATS formatting rules](/blog/ats-resume-checker-formatting-rules), because good bullets will not help if the system cannot read them.",
+      },
+      { type: "h2", text: "Why duties score lower than achievements" },
+      {
+        type: "p",
+        text: "Compare \"Responsible for managing social media accounts\" with \"Grew Instagram followers from 4,000 to 11,500 in 9 months by moving to a weekly short-video schedule\". The first could describe anyone who has held the job. The second tells the reader what changed because you were there, how you did it, and how big the result was.",
+      },
+      {
+        type: "p",
+        text: "Software and people both respond to this difference. An **ATS checker** can spot action verbs, numbers and relevant skills, and a recruiter skimming your resume looks for evidence that you can do the job. A specific bullet gives both of them something to work with.",
+      },
+      { type: "h2", text: "The formula: verb + task + method + result" },
+      {
+        type: "ul",
+        items: [
+          "**Verb:** a specific action word, such as built, negotiated, reduced or launched.",
+          "**Task:** what you worked on.",
+          "**Method:** the tool, skill or approach you used. This is a natural place for keywords from the job description.",
+          "**Result:** what changed, ideally as a number, and if not, as a clear outcome.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "The formula in use",
+        text: "\"Reduced (verb) customer onboarding time (task) from 10 days to 4 by building a self-serve setup guide in Notion (method), which lowered support tickets from new accounts by about a third (result).\"",
+      },
+      {
+        type: "p",
+        text: "Not every bullet needs all four parts. A bullet with a verb, a task and a result is often stronger than one padded out to fit the pattern.",
+      },
+      { type: "h2", text: "Before-and-after examples by role" },
+      {
+        type: "p",
+        text: "The figures below are illustrations to show the structure. Replace them with your own real results, and do not copy a number you cannot explain in an interview.",
+      },
+      {
+        type: "table",
+        head: ["Role", "Before", "After"],
+        rows: [
+          ["Software engineer", "Worked on improving website performance", "Cut average page load time from 3.8s to 1.6s by adding image lazy loading and Redis caching to the checkout flow"],
+          ["Sales executive", "Responsible for meeting sales targets", "Closed $420K in new B2B revenue in FY25, reaching 118% of quota through outbound campaigns to mid-size manufacturers"],
+          ["Digital marketer", "Handled email marketing campaigns", "Raised email click-through rate from 1.9% to 3.4% by segmenting a 25,000-contact list and A/B testing subject lines in Mailchimp"],
+          ["Accountant", "Prepared monthly financial reports", "Shortened month-end close from 9 days to 5 by standardising reconciliations and automating journal entries in Excel and Tally"],
+          ["Customer support", "Answered customer queries by phone and email", "Resolved around 60 tickets a day with a 96% satisfaction rating, and wrote 12 help articles covering the most common billing questions"],
+          ["Teacher", "Taught math to high school students", "Taught algebra to 5 classes of 30 students and introduced weekly diagnostic quizzes, helping raise the pass rate from 71% to 86% in one year"],
+          ["Project manager", "Managed projects and coordinated with teams", "Delivered a $1.2M ERP rollout 3 weeks ahead of schedule, coordinating 4 vendors and a 15-person team using Jira and weekly risk reviews"],
+          ["Recent graduate", "Did a group project on machine learning", "Led a team of 4 building a Python model to predict customer churn at 84% accuracy, and presented the findings to a panel of 3 faculty members"],
+        ],
+      },
+      { type: "h2", text: "How to find results when you have no obvious numbers" },
+      {
+        type: "p",
+        text: "Many people feel their work cannot be measured. Support, administration, operations and teaching roles often do not come with a dashboard. Ask yourself these questions about each job:",
+      },
+      {
+        type: "ul",
+        items: [
+          "**How much?** Budgets handled, invoices processed, tickets closed, students taught.",
+          "**How many people?** The size of the team you worked in or led, and the number of customers or colleagues your work served.",
+          "**How often?** Daily, weekly or quarterly work adds up: \"Published 3 reports a week for the leadership team\".",
+          "**What got faster, cheaper or more accurate?** Compare how things worked before and after your change.",
+          "**What did you create that is still in use?** Templates, checklists, training guides and processes all count.",
+          "**Who noticed?** Awards, promotions, being asked to train others, or positive client feedback.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Old performance reviews, sent emails, project trackers and team reports can help you remember the details. If you estimate, make it honest and write \"about\" or \"around\". You should be able to explain any figure if an interviewer asks about it.",
+      },
+      { type: "h2", text: "Swap weak verbs for specific ones" },
+      {
+        type: "table",
+        head: ["Instead of", "Try, if it is accurate"],
+        rows: [
+          ["Responsible for", "Managed, owned, led, oversaw"],
+          ["Helped with", "Supported, contributed to, drafted, prepared"],
+          ["Worked on", "Built, designed, developed, implemented"],
+          ["Improved", "Reduced, increased, shortened, streamlined"],
+          ["Talked to clients", "Advised, negotiated with, presented to, onboarded"],
+          ["Made reports", "Analyzed, forecasted, audited, reported on"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Choose the verb that matches what you really did. If you supported a project rather than leading it, say \"supported\". An inflated verb is easy to expose with one follow-up question in an interview.",
+      },
+      { type: "h2", text: "Common bullet point mistakes" },
+      {
+        type: "ul",
+        items: [
+          "**Copying the job description from your last role.** It lists what the employer wanted, not what you delivered.",
+          "**Using buzzwords with no evidence.** \"Results-driven team player\" tells a reader very little. Show the result and the teamwork instead.",
+          "**Starting every bullet with the same verb.** Varied verbs read better and describe your work more accurately.",
+          "**Quoting numbers without context.** \"Increased sales by 200%\" raises questions if it means going from 2 sales to 6. Add the base figure or the timeframe.",
+          "**Sharing confidential figures.** If your employer's numbers are private, use percentages or rounded values.",
+          "**Keeping irrelevant bullets.** Each bullet should help make the case for the job you are applying to now.",
+        ],
+      },
+      { type: "h2", text: "A 20-minute rewrite routine" },
+      {
+        type: "ol",
+        items: [
+          "Run your resume through our [resume score checker](/#upload-section) and note your content score and suggestions.",
+          "Pick your most recent role, since that is where recruiters look first.",
+          "Mark each bullet as a **duty** or an **achievement**.",
+          "Rewrite the duties using the formula above, answering the \"how much, how many, how often\" questions as you go.",
+          "Read the job description and work in its key terms wherever they truthfully describe your work.",
+          "Put the bullet most relevant to the target job first in each role.",
+          "Check the file again and see whether the content category has improved.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Once your bullets are strong, adapt them for each application using our [30-minute tailoring workflow](/blog/resume-score-checker-keyword-tailoring). To understand what the overall number represents, read [what your ATS score means](/blog/ats-score-checker-what-your-score-means).",
+      },
+    ],
+  },
+  {
     slug: "ats-score-checker-what-your-score-means",
     title: "ATS Score Checker: What Your Score Actually Means and How to Raise It",
     metaTitle: "ATS Score Checker: What Your Resume Score Means (2026 Guide)",
@@ -89,7 +243,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Our [free ATS score checker](/) groups these into categories so you can see *where* points were lost, not just how many. That breakdown matters more than the total.",
+        text: "Our [free ATS score checker](/) groups these into categories so you can see where points were lost, not just how many. That breakdown matters more than the total.",
       },
       { type: "h2", text: "What is a good ATS score?" },
       {
@@ -246,7 +400,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "If the plain-text version reads cleanly, you have solved the hardest part. From there, improvements come from content and keywords — covered in our guide to [tailoring with a resume score checker](/blog/resume-score-checker-keyword-tailoring).",
+        text: "If the plain-text version reads cleanly, you have solved the hardest part. From there, improvements come from content and keywords — covered in our guides to [writing stronger bullet points](/blog/resume-bullet-points-before-and-after-examples) and [tailoring with a resume score checker](/blog/resume-score-checker-keyword-tailoring).",
       },
       { type: "h2", text: "Does a beautiful design hurt you?" },
       {
