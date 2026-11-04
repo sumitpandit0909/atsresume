@@ -27,6 +27,155 @@ export const AUTHOR = "ATS Score Checker Free Editorial Team";
 
 export const articles: Article[] = [
   {
+    slug: "employment-gap-resume-ats",
+    title: "Employment Gap on Resume: Will the ATS Reject It, and How to List It Safely",
+    metaTitle: "Employment Gap on Resume: Does an ATS Reject It?",
+    description:
+      "Worried an employment gap on your resume will fail the ATS? Learn what an ATS really does with gaps, how to list them, and sample wording you can adapt.",
+    keywords: "employment gap resume ats, career gap on resume, does ats reject employment gaps, resume gap how to list, ats resume checker",
+    published: "2026-11-04",
+    updated: "2026-11-04",
+    readMinutes: 7,
+    excerpt:
+      "A gap in your work history does not usually fail an ATS by itself. What hurts is how you handle it on the page. Here is how to list a gap clearly and honestly, with wording you can adapt.",
+    faq: [
+      {
+        q: "Does an employment gap on a resume get rejected by an ATS?",
+        a: "Not by default. Greenhouse, for example, says employers may set up auto-reject rules on very specific criteria, and that most recruiters review applications themselves. Whether any particular employer filters on dates is their own setting, so you cannot know in advance. Clear dates and a short, honest explanation protect you either way.",
+      },
+      {
+        q: "Should I leave a short gap off my resume?",
+        a: "If you list years only and the gap is a few months between two jobs, it often does not show at all. You can use \"2021 - 2023\" style dates for older roles, but never change dates to hide a longer gap, because background and reference checks can contradict you.",
+      },
+      {
+        q: "Is a skills-based (functional) resume better for hiding a gap?",
+        a: "Usually not. Without dated job entries the parser has less to work with, and recruiters tend to read it as an attempt to hide something. A chronological layout with a brief gap entry is clearer for both people and software.",
+      },
+      {
+        q: "Where should I explain a career break: resume, cover letter or interview?",
+        a: "Put one neutral line on the resume, add a sentence in the cover letter if the gap is long or recent, and prepare a calm 30-second spoken answer for the interview.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "A career gap on its own is not something most applicant tracking systems are built to punish. An **employment gap on a resume** does not fail the ATS automatically; what causes trouble is a messy timeline, missing dates or an attempt to disguise the break. If you list your jobs in a clean, dated order and add a short, honest line for the gap, you are in good shape for both the software and the human reader. This guide explains what an ATS actually does with dates, how to show a gap, and wording you can adapt.",
+      },
+      { type: "h2", text: "What an ATS actually does with your dates" },
+      {
+        type: "p",
+        text: "An ATS reads your resume into fields: job titles, employers, start and end dates, skills and education. Our guide on [how an ATS checker reads your resume](/blog/how-ats-checker-reads-your-resume) covers that parsing step in detail. Dates matter mainly because they let the system, and the recruiter, see the order and length of your roles.",
+      },
+      {
+        type: "p",
+        text: "Whether a gap is penalised depends on the employer, not on a universal rule. Greenhouse, one widely used system, says on its [candidate blog](https://my.greenhouse.com/blogs/what-really-happens-after-you-apply-for-a-job) that recruiters might set a job up to auto-reject or auto-advance applications based on very specific rules, and that most recruiters review applications in the order they arrive. Its [support documentation](https://support.greenhouse.io/hc/en-us/articles/4401963991707-Application-review-stage) describes Application Review as the first stage of the process, where a recruiter reviews each applicant and advances or rejects them. I could not find documentation of a standard \"employment gap\" filter in these sources, so treat any claim of a built-in gap penalty with caution.",
+      },
+      {
+        type: "callout",
+        title: "What this means for you",
+        text: "You cannot control an employer's screening rules. You can control whether your dates are parsed correctly and whether a human who reads your resume finds a clear, believable story.",
+      },
+      { type: "h2", text: "Where gaps really cost people" },
+      {
+        type: "ul",
+        items: [
+          "**Missing or inconsistent dates.** If the parser cannot read a start or end date, the timeline looks broken, and a recruiter may assume the worst.",
+          "**Knockout-style application questions.** Some application forms ask direct questions, such as whether you can start by a certain date or hold a particular work authorisation. These are answered separately from your resume.",
+          "**A layout that hides your history.** Skills-only resumes remove the dated entries a parser and a recruiter expect.",
+          "**Dates that do not match reality.** Stretching a job to cover a gap can be found when employers verify your history.",
+        ],
+      },
+      { type: "h2", text: "How long is a gap that needs explaining?" },
+      {
+        type: "p",
+        text: "There is no official cut-off. As a practical guide, a gap of a few months between jobs rarely needs comment, especially if you list years rather than months. A gap of around six months to a year deserves a short line if it appears in the dates. A gap longer than a year, or any recent gap, is better named plainly, because recruiters will notice it anyway. These thresholds are common judgement, not rules.",
+      },
+      {
+        type: "table",
+        head: ["Gap length", "Suggested handling"],
+        rows: [
+          ["Under 3 months", "Usually no mention. Consider listing years only for older roles."],
+          ["3 to 12 months", "A one-line entry if the dates show it, or a mention in the cover letter."],
+          ["Over 12 months", "A dated entry on the resume with a neutral reason and what you did."],
+          ["Recent and ongoing", "State that you are returning to work and show recent learning or project activity."],
+        ],
+      },
+      { type: "h2", text: "How to list a gap on your resume, step by step" },
+      {
+        type: "ol",
+        items: [
+          "Use a **reverse-chronological** layout with standard headings, as covered in our [ATS resume formatting rules](/blog/ats-resume-checker-formatting-rules).",
+          "Write every date in one consistent format, such as \"Mar 2022 - Aug 2023\".",
+          "For a gap of a year or more, add a plain entry in the experience section, for example \"Career break (caregiving)\" with its dates.",
+          "Add one or two bullets under it only if they are true and relevant: a course, freelance work, volunteering, or a project.",
+          "Keep the reason neutral and short. You do not owe anyone medical or family detail.",
+          "Check the whole timeline for overlaps and holes before you export.",
+        ],
+      },
+      { type: "h2", text: "Sample wording you can adapt" },
+      {
+        type: "p",
+        text: "The examples below are illustrations. Replace the details with your own true situation, and do not claim activity that did not happen.",
+      },
+      {
+        type: "table",
+        head: ["Situation", "Example entry"],
+        rows: [
+          ["Caregiving", "Career break - full-time family caregiving (Jan 2022 - Jun 2023). Completed an online project management course during this period."],
+          ["Health recovery", "Career break - personal health leave (Sep 2021 - Aug 2022). Ready to return to full-time work."],
+          ["Layoff and job search", "Job search following company restructuring (Apr 2023 - Nov 2023). Freelance bookkeeping for two small clients."],
+          ["Upskilling", "Career break - full-time study (2022 - 2023). Completed a data analytics certificate and built three portfolio projects."],
+          ["Relocation or travel", "Career break - relocated overseas with family (2021 - 2022). Volunteered with a community education group."],
+        ],
+      },
+      {
+        type: "p",
+        text: "Notice that none of these apologise or over-explain. They state the fact, give dates, and move on to what you can do now.",
+      },
+      { type: "h2", text: "Should you use a functional resume to hide a gap?" },
+      {
+        type: "p",
+        text: "A functional or skills-based resume groups your abilities at the top and shrinks or removes the dated work history. It can look like a neat solution, but it works against you in two ways. A parser has fewer dated entries to read, and many recruiters find it harder to see where and when you used each skill. If you want your skills to stand out, a short skills section plus a clear chronological history does the job without the downsides. If you prefer a hybrid, keep a complete dated work history below it.",
+      },
+      { type: "h2", text: "Make the rest of your resume carry the weight" },
+      {
+        type: "p",
+        text: "A gap matters less when the roles around it are strong. Spend your effort on the parts you control: bullet points that show results, and keywords that match the job. Our guide to [resume bullet points with before-and-after examples](/blog/resume-bullet-points-before-and-after-examples) will help with the first, and a [keyword tailoring workflow](/blog/resume-score-checker-keyword-tailoring) with the second. If you were learning during the gap, show it in a dedicated projects or certifications section, using the same job-description language where it is truthful.",
+      },
+      { type: "h2", text: "Talking about the gap in a cover letter and interview" },
+      {
+        type: "p",
+        text: "For a long or recent gap, one sentence in the cover letter is enough, such as: \"After a year away from work to care for a family member, I have returned to the job market and completed coursework in X.\" In an interview, a simple structure works: what happened, what you did or learned, and why you are ready now. Practise it aloud until it takes about 30 seconds and sounds calm rather than defensive.",
+      },
+      { type: "h2", text: "Special cases: freelancing, short jobs and multiple gaps" },
+      {
+        type: "p",
+        text: "If you freelanced or did contract work during a break, list it as a normal job with your own business name or \"Freelance\" as the employer, real dates, and honest bullets. If you held a very short job, you can include it when it is relevant, or leave it out when it adds nothing and does not create a hole of a year or more. When you have more than one gap, treat each the same way: dated, neutral and short. Avoid explaining every break in detail; a pattern of long justifications draws more attention than the gaps themselves.",
+      },
+      {
+        type: "p",
+        text: "Also keep your education dates consistent with your work history. A graduation year that does not fit the first job, or a certificate with no date, creates the very confusion you are trying to avoid.",
+      },
+      { type: "h2", text: "Mistakes to avoid" },
+      {
+        type: "ul",
+        items: [
+          "Changing dates or titles to close the gap.",
+          "Listing activities you did not really do.",
+          "Using a different date format in each section.",
+          "Writing a long personal explanation on the resume itself.",
+          "Putting the gap explanation in a header or text box that a parser may skip.",
+          "Leaving the resume untested after edits.",
+        ],
+      },
+      { type: "h2", text: "Check your resume before you apply" },
+      {
+        type: "p",
+        text: "Before you submit, run your resume through the [free ATS score checker](/#upload-section) to see whether your dates, headings and contact details read cleanly. A checker cannot tell you how any single employer filters applications, and it does not predict interviews, but it can catch the parsing problems that make a gap look worse than it is. Fix those first, then send the application with confidence in a timeline that is clear, dated and true.",
+      },
+    ],
+  },
+  {
     slug: "resume-bullet-points-before-and-after-examples",
     title: "How to Write Resume Bullet Points That Score Well: Before-and-After Examples by Role",
     metaTitle: "Resume Bullet Points: Before-and-After Examples That Score Well",
@@ -188,7 +337,7 @@ export const articles: Article[] = [
       "Learn what an ATS score checker measures, what a good ATS score is, why scores differ between tools, and a practical plan to raise your resume score before you apply.",
     keywords: "ats score checker, ats score, good ats score, resume ats score, free ats score checker",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-04",
     readMinutes: 9,
     excerpt:
       "An ATS score is an estimate, not a verdict. Here is what the number really measures, what range to aim for, and the order in which to fix things.",
@@ -295,7 +444,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Next, read [how an ATS checker reads your resume](/blog/how-ats-checker-reads-your-resume) to understand why formatting matters so much, or jump to our [ATS resume formatting rules](/blog/ats-resume-checker-formatting-rules).",
+        text: "Next, read [how an ATS checker reads your resume](/blog/how-ats-checker-reads-your-resume) to understand why formatting matters so much, or jump to our [ATS resume formatting rules](/blog/ats-resume-checker-formatting-rules), and if a career break worries you, see [employment gap on resume and the ATS](/blog/employment-gap-resume-ats).",
       },
     ],
   },
