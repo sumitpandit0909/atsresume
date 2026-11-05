@@ -27,6 +27,206 @@ export const AUTHOR = "ATS Score Checker Free Editorial Team";
 
 export const articles: Article[] = [
   {
+    slug: "ats-friendly-resume-for-freshers",
+    title: "ATS-Friendly Resume for Freshers: How to Build One With No Work Experience",
+    metaTitle: "ATS-Friendly Resume for Freshers With No Experience",
+    description:
+      "Build an ATS-friendly resume for freshers with no work experience: the right sections, project and internship examples, and a checklist before you apply.",
+    keywords: "ats friendly resume for freshers, fresher resume no experience, resume for freshers ats, first job resume, ats resume checker",
+    published: "2026-11-05",
+    updated: "2026-11-05",
+    readMinutes: 8,
+    excerpt:
+      "No job history does not mean an empty resume. Here is how freshers can build a clean, ATS-friendly resume from projects, education, internships and skills, with examples you can adapt.",
+    faq: [
+      {
+        q: "What should a fresher put on a resume with no experience?",
+        a: "Lead with a short summary, then education, projects, skills, and anything that shows applied effort: internships, volunteering, college clubs, competitions, certifications and part-time work. Only list what is true, and describe each item by what you did and what came out of it.",
+      },
+      {
+        q: "How long should a fresher resume be?",
+        a: "One page is the practical norm for someone starting out. If you need a second page, it usually means older school details, repeated points or weak projects are taking space that stronger items should have.",
+      },
+      {
+        q: "Can I use a resume template from Word, Canva or a builder?",
+        a: "Yes, if the result is a single column with real text, standard headings and no tables, text boxes or skill-bar graphics. Always export it, test it, and check how the text reads back before you apply.",
+      },
+      {
+        q: "Should freshers write an objective or a summary?",
+        a: "A two-line summary is more useful than a generic objective. Say what you studied, the kind of role you want, and two or three skills or projects that fit that role. Skip phrases like hard-working team player that say nothing specific.",
+      },
+      {
+        q: "Do I need a GPA or percentage on my resume?",
+        a: "Include it if the job posting asks for it or if it is a strength. If it is weak, you can leave it out and let projects and skills carry the page, but do not state a figure that is not accurate.",
+      },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "An **ATS-friendly resume for freshers** is a one-page, single-column document that uses standard section headings and plain text, and fills the space that work history would normally take with education, projects, internships, skills and activities that match the job. You do not need paid experience to pass a resume parser; you need clear structure, honest evidence of what you can do, and the language of the job posting used where it is true. This guide shows the layout, section by section, with examples you can adapt.",
+      },
+      { type: "h2", text: "What an ATS needs from a fresher resume" },
+      {
+        type: "p",
+        text: "An applicant tracking system reads your file and sorts the text into fields such as name, contact details, education, skills and experience. Our guide on [how an ATS checker reads your resume](/blog/how-ats-checker-reads-your-resume) explains that step in detail. For a fresher, the same rules apply as for anyone else, but the stakes around structure are higher because you have fewer pages of content to compensate for a messy layout.",
+      },
+      {
+        type: "p",
+        text: "Whether a recruiter, a software filter or both look at your resume first depends on the employer, and that is not something you can find out in advance. Aim for a document that is easy for software to read and easy for a person to scan in under a minute. If both are satisfied, you have done everything that is in your control.",
+      },
+      { type: "h2", text: "The best resume format for freshers" },
+      {
+        type: "p",
+        text: "For most freshers, a reverse-chronological layout with a single column is the safest choice. That means the newest item comes first inside each section. Because you may have no jobs, the order of the sections themselves becomes your main design decision.",
+      },
+      {
+        type: "table",
+        head: ["Order", "Section", "What goes in it"],
+        rows: [
+          ["1", "Name and contact", "Full name, phone, professional email, city, and one link such as LinkedIn or GitHub"],
+          ["2", "Summary", "Two lines: your degree, target role, and two or three relevant strengths"],
+          ["3", "Education", "Degree, college, graduation year, grade if strong, and relevant coursework"],
+          ["4", "Projects", "Two to four projects with tools used and a clear outcome"],
+          ["5", "Internships or experience", "Internships, freelance, part-time work or volunteering, if you have any"],
+          ["6", "Skills", "Tools, languages and methods grouped by type"],
+          ["7", "Certifications and activities", "Courses, competitions, clubs, leadership roles"],
+        ],
+      },
+      {
+        type: "p",
+        text: "If you have a relevant internship, you can move it above projects. If you have none, keep projects directly under education so the reader reaches your strongest evidence quickly. Our [ATS resume formatting rules](/blog/ats-resume-checker-formatting-rules) cover fonts, headings, file types and what to avoid in more detail.",
+      },
+      { type: "h2", text: "Write a fresher summary that says something" },
+      {
+        type: "p",
+        text: "A summary of two lines is enough. It should name your degree, the type of role you want, and the proof you have. Compare these two versions.",
+      },
+      {
+        type: "table",
+        head: ["Weak", "Stronger"],
+        rows: [
+          ["Hard-working fresher seeking a challenging role in a reputed company to utilise skills.", "B.Com graduate (2026) applying for junior accounting roles. Completed a Tally and Excel course, and built a monthly expense reconciliation workbook as a college project."],
+          ["Motivated engineer looking for growth opportunities.", "Computer science graduate (2026) targeting junior web developer roles. Built and deployed two React projects with a REST API backend."],
+        ],
+      },
+      {
+        type: "p",
+        text: "The examples above are illustrations. Replace the degree, tools and projects with your own, and never describe something you have not actually done.",
+      },
+      { type: "h2", text: "Turn projects into experience" },
+      {
+        type: "p",
+        text: "For freshers, projects do the job that jobs do for experienced candidates. A project entry should show a problem, what you did, which tools you used, and what happened. Use the same structure as a work bullet: action, method, result. Our article on [resume bullet points with before-and-after examples](/blog/resume-bullet-points-before-and-after-examples) walks through that formula across several roles.",
+      },
+      {
+        type: "h3",
+        text: "A project entry format that parses well",
+      },
+      {
+        type: "ul",
+        items: [
+          "Project name, then a short role or type, then the year, all on one line.",
+          "Two or three bullets, each starting with a verb.",
+          "A tools line, or tools named inside the bullets, so the keywords appear in context.",
+          "A link to the code or a live demo, written as plain text so it survives copying.",
+        ],
+      },
+      {
+        type: "h3",
+        text: "Example project bullets (illustrative)",
+      },
+      {
+        type: "table",
+        head: ["Field", "Before", "After"],
+        rows: [
+          ["Data analysis", "Made a sales dashboard for college project.", "Built a sales dashboard in Power BI from a public retail dataset, summarising revenue by region and month for a class presentation."],
+          ["Marketing", "Managed social media for the college fest.", "Posted and scheduled content for the college fest account over six weeks and tracked reach in the platform's own analytics to decide which formats to repeat."],
+          ["Web development", "Created a to-do app.", "Developed a task manager in React and Node with user login and a database, deployed it online and documented setup steps in the README."],
+        ],
+      },
+      {
+        type: "p",
+        text: "Numbers help when they are real. If you did not measure anything, describe scope instead: the size of the dataset, the number of pages built, the number of people who used it. Do not invent a figure to make a bullet sound stronger.",
+      },
+      { type: "h2", text: "Other things that count as experience" },
+      {
+        type: "p",
+        text: "Many freshers underrate work that does not carry a job title. If it involved responsibility, a skill or a result, it can go on your resume.",
+      },
+      {
+        type: "ul",
+        items: [
+          "**Internships and training programmes**, including short or unpaid ones.",
+          "**Part-time and campus jobs**, such as tutoring, library work or retail, which show reliability and customer handling.",
+          "**Volunteering and NGO work** with a clear role and a date range.",
+          "**College clubs and committees**, especially where you organised something or led a team.",
+          "**Hackathons, case competitions and contests**, with the result stated plainly.",
+          "**Freelance or family business work**, listed honestly with what you actually did.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Put these under a heading the parser recognises, such as Experience, Internships, Volunteering or Leadership. A creative heading may be missed when the software looks for standard labels.",
+      },
+      { type: "h2", text: "Build the skills section from the job description" },
+      {
+        type: "p",
+        text: "Your skills section is where the language of the posting meets your real abilities. Read three or four postings for the role you want and note the tools and methods that repeat. Then list the ones you genuinely have, using the spelling the postings use, for example Microsoft Excel rather than only MS Office. Our [keyword tailoring workflow](/blog/resume-score-checker-keyword-tailoring) shows how to do that in about half an hour for each application.",
+      },
+      {
+        type: "table",
+        head: ["Grouping", "Example (illustrative)"],
+        rows: [
+          ["Tools", "Microsoft Excel, Power BI, Tally, Google Analytics"],
+          ["Languages", "Python, SQL, JavaScript"],
+          ["Methods", "Data cleaning, pivot tables, A/B test basics, bookkeeping"],
+          ["Communication", "Presentations, report writing, English and Hindi"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Avoid skill ratings, bars, stars and percentage scores. They are graphics that a parser cannot read, and they invite questions you may not want to answer. If you want to show depth, put the skill inside a project bullet where it is used.",
+      },
+      { type: "h2", text: "Education details that help, and those that do not" },
+      {
+        type: "p",
+        text: "List your degree name in full, your college, your graduation year and your grade if it supports your case. Add three to five relevant courses if your degree title alone does not match the job. Skip school marks from many years back unless the application asks for them, and keep dates in the same format used elsewhere on the page.",
+      },
+      { type: "h2", text: "Mistakes freshers make" },
+      {
+        type: "ul",
+        items: [
+          "Using a two-column template with a sidebar for skills and contact details.",
+          "Placing contact information in the header or footer, where some parsers skip it.",
+          "Adding a photo, date of birth or other personal details the application does not ask for.",
+          "Sending one resume to every job instead of adjusting the skills and summary.",
+          "Listing every course and certificate, which buries the strongest ones.",
+          "Copying keywords you do not actually have. It is dishonest, and it shows up fast in an interview.",
+          "Naming the file resume final 2.pdf rather than something clear like Firstname-Lastname-Resume.",
+        ],
+      },
+      { type: "h2", text: "A pre-submission checklist" },
+      {
+        type: "ol",
+        items: [
+          "One page, one column, standard headings.",
+          "Real text, not an image of text, and no tables or text boxes holding key content.",
+          "Contact details in the main body of the page.",
+          "A summary that names your degree, target role and proof.",
+          "At least two projects or experiences written with action, method and result.",
+          "A skills section that mirrors the posting where you honestly have the skill.",
+          "A file in the format the application asks for, with a clear file name.",
+          "A last read-through for spelling, dates and consistent formatting.",
+        ],
+      },
+      { type: "h2", text: "Test your resume before you send it" },
+      {
+        type: "p",
+        text: "Once the draft is done, upload it to the [free ATS score checker](/#upload-section) with a job description for the role. The report shows whether your sections and contact details are read correctly and which keywords from the posting are missing. If you are unsure how to interpret the numbers, [what your ATS score actually means](/blog/ats-score-checker-what-your-score-means) explains it. The checker is a practical way to catch formatting and keyword gaps; it cannot promise interviews or reproduce any single employer's system. Fix what it flags, keep every line honest, and send the version that a person could read in a minute and trust.",
+      },
+    ],
+  },
+  {
     slug: "employment-gap-resume-ats",
     title: "Employment Gap on Resume: Will the ATS Reject It, and How to List It Safely",
     metaTitle: "Employment Gap on Resume: Does an ATS Reject It?",
