@@ -69,41 +69,33 @@ function Block({ block }: { block: ArticleBlock }) {
   }
 }
 
-function useStructuredData(article: Article) {
-  useEffect(() => {
-    const url = `${SITE}/blog/${article.slug}`;
-    const data = [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: article.title,
-        description: article.description,
-        datePublished: article.published,
-        dateModified: article.updated,
-        author: { "@type": "Organization", name: AUTHOR, url: `${SITE}/about` },
-        publisher: { "@type": "Organization", name: "ATS Score Checker Free", url: SITE },
-        mainEntityOfPage: url,
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: article.faq.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
-        })),
-      },
-    ];
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify(data);
-    document.head.appendChild(script);
-    return () => script.remove();
-  }, [article]);
+function structuredData(article: Article) {
+  const url = `${SITE}/blog/${article.slug}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.description,
+      datePublished: article.published,
+      dateModified: article.updated,
+      author: { "@type": "Organization", name: AUTHOR, url: `${SITE}/about` },
+      publisher: { "@type": "Organization", name: "ATS Score Checker Free", url: SITE },
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: article.faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ];
 }
 
 function ArticleView({ article }: { article: Article }) {
-  useStructuredData(article);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [article.slug]);
@@ -117,6 +109,7 @@ function ArticleView({ article }: { article: Article }) {
         description={article.description}
         canonicalUrl={`${SITE}/blog/${article.slug}`}
         keywords={article.keywords}
+        structuredData={structuredData(article)}
       />
       <SiteHeader />
 

@@ -25,10 +25,10 @@ export default function Disclaimer() {
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-bold text-gray-900 leading-tight">
-                  ATS Resume Analyzer
+                  ATS Score Checker Free
                 </h1>
                 <p className="text-xs lg:text-sm text-gray-600">
-                  AI-Powered Career Optimization
+                  Free Resume ATS Score Analysis
                 </p>
               </div>
             </Link>
@@ -64,7 +64,7 @@ export default function Disclaimer() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Educational Purpose Only</h2>
             <p className="text-gray-600 leading-relaxed">
-              ATS Resume Analyzer is an educational tool designed to provide insights and suggestions for improving resume content and formatting. Our service is intended for informational and educational purposes only. The analysis and recommendations provided should not be considered as professional career advice, legal advice, or guaranteed solutions for job placement.
+              ATS Score Checker Free is an educational tool designed to provide insights and suggestions for improving resume content and formatting. Our service is intended for informational and educational purposes only. The analysis and recommendations provided should not be considered as professional career advice, legal advice, or guaranteed solutions for job placement.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We strongly recommend consulting with professional career counselors, HR professionals, or industry experts for personalized career advice and resume optimization.
@@ -144,7 +144,7 @@ export default function Disclaimer() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Limitation of Liability</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              To the fullest extent permitted by law, ATS Resume Analyzer and its operators shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to:
+              To the fullest extent permitted by law, ATS Score Checker Free and its operators shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to:
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
               <li>Damages for loss of profits, goodwill, use, data, or other intangible losses</li>
@@ -171,7 +171,7 @@ export default function Disclaimer() {
             </p>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="w-4 h-4" />
-              <span className="text-sm">support@atsanalyzer.com</span>
+              <span className="text-sm">its.sumitpandit@gmail.com</span>
             </div>
           </section>
         </div>

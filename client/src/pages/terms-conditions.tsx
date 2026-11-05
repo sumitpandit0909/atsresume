@@ -25,10 +25,10 @@ export default function TermsConditions() {
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-bold text-gray-900 leading-tight">
-                  ATS Resume Analyzer
+                  ATS Score Checker Free
                 </h1>
                 <p className="text-xs lg:text-sm text-gray-600">
-                  AI-Powered Career Optimization
+                  Free Resume ATS Score Analysis
                 </p>
               </div>
             </Link>
@@ -64,7 +64,7 @@ export default function TermsConditions() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-600 leading-relaxed">
-              By accessing and using ATS Resume Analyzer ("the Service"), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by these terms, please do not use this Service.
+              By accessing and using ATS Score Checker Free ("the Service"), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by these terms, please do not use this Service.
             </p>
           </section>
 
@@ -72,7 +72,7 @@ export default function TermsConditions() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
             <p className="text-gray-600 leading-relaxed">
-              ATS Resume Analyzer is an AI-powered educational tool that provides automated analysis and suggestions for resume optimization. The Service analyzes uploaded resumes and provides insights regarding ATS compatibility, content quality, industry alignment, and improvement opportunities.
+              ATS Score Checker Free is an AI-powered educational tool that provides automated analysis and suggestions for resume optimization. The Service analyzes uploaded resumes and provides insights regarding ATS compatibility, content quality, industry alignment, and improvement opportunities.
             </p>
           </section>
 
@@ -120,7 +120,7 @@ export default function TermsConditions() {
             
             <h3 className="text-xl font-medium text-gray-800 mb-3">6.1 Our Intellectual Property</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
-              The Service and its original content, features, and functionality are owned by ATS Resume Analyzer and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+              The Service and its original content, features, and functionality are owned by ATS Score Checker Free and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
             </p>
 
             <h3 className="text-xl font-medium text-gray-800 mb-3">6.2 User Content</h3>
@@ -155,7 +155,7 @@ export default function TermsConditions() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Limitation of Liability</h2>
             <p className="text-gray-600 leading-relaxed">
-              TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ATS RESUME ANALYZER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR USE OF THE SERVICE.
+              TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ATS SCORE CHECKER FREE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR USE OF THE SERVICE.
             </p>
           </section>
 
@@ -163,7 +163,7 @@ export default function TermsConditions() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Indemnification</h2>
             <p className="text-gray-600 leading-relaxed">
-              You agree to defend, indemnify, and hold harmless ATS Resume Analyzer and its operators from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses arising from your use of the Service or violation of these terms.
+              You agree to defend, indemnify, and hold harmless ATS Score Checker Free and its operators from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses arising from your use of the Service or violation of these terms.
             </p>
           </section>
 
@@ -187,7 +187,7 @@ export default function TermsConditions() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Governing Law</h2>
             <p className="text-gray-600 leading-relaxed">
-              These Terms shall be governed and construed in accordance with the laws of the jurisdiction where ATS Resume Analyzer operates, without regard to its conflict of law provisions.
+              These Terms shall be governed and construed in accordance with the laws of the jurisdiction where ATS Score Checker Free operates, without regard to its conflict of law provisions.
             </p>
           </section>
 
@@ -207,7 +207,7 @@ export default function TermsConditions() {
             </p>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="w-4 h-4" />
-              <span className="text-sm">support@atsanalyzer.com</span>
+              <span className="text-sm">its.sumitpandit@gmail.com</span>
             </div>
           </section>
         </div>

@@ -25,10 +25,10 @@ export default function Dmca() {
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-bold text-gray-900 leading-tight">
-                  ATS Resume Analyzer
+                  ATS Score Checker Free
                 </h1>
                 <p className="text-xs lg:text-sm text-gray-600">
-                  AI-Powered Career Optimization
+                  Free Resume ATS Score Analysis
                 </p>
               </div>
             </Link>
@@ -73,7 +73,7 @@ export default function Dmca() {
               All DMCA notices must be sent to our Designated Copyright Agent at the following email address:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-md p-4 mb-4">
-              <p className="text-gray-900 font-medium">Email: <a href="mailto:support@atsanalyzer.com" className="text-blue-600 hover:underline">support@atsanalyzer.com</a></p>
+              <p className="text-gray-900 font-medium">Email: <a href="mailto:its.sumitpandit@gmail.com" className="text-blue-600 hover:underline">its.sumitpandit@gmail.com</a></p>
               <p className="text-gray-600 mt-2">Please include "DMCA Notice" in the subject line of your email.</p>
             </div>
           </section>

@@ -6,15 +6,37 @@ interface MetaTagsProps {
   canonicalUrl?: string;
   keywords?: string;
   ogImage?: string;
+  structuredData?: unknown;
 }
+
+// Filled in while a page is prerendered, because effects do not run on the server.
+export const ssrMeta: { current: MetaTagsProps | null } = { current: null };
 
 export function MetaTags({
   title = "ATS Score Checker Free – 100% Free (No Signup Required)",
   description = "ATS score checker free - Get instant ATS compatibility score for your resume. No signup required. Use our free ats score checker tool to optimize your resume for better job success.",
   canonicalUrl = "https://www.atsscorecheckerfree.com/",
   keywords = "ats score checker free, free ats score checker, ats resume score checker, resume ats score checker, google ats resume score, ats score checker",
-  ogImage = "/favicon.svg"
+  ogImage = "/favicon.svg",
+  structuredData
 }: MetaTagsProps) {
+  if (typeof document === "undefined") {
+    ssrMeta.current = { title, description, canonicalUrl, keywords, ogImage, structuredData };
+  }
+
+  const structuredDataJson = structuredData ? JSON.stringify(structuredData) : "";
+
+  useEffect(() => {
+    document.querySelectorAll("script[data-page-ld]").forEach((el) => el.remove());
+    if (!structuredDataJson) return;
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.dataset.pageLd = "";
+    script.text = structuredDataJson;
+    document.head.appendChild(script);
+    return () => script.remove();
+  }, [structuredDataJson]);
+
   useEffect(() => {
     // Update document title
     document.title = title;

@@ -592,7 +592,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Our [free ATS score checker](/) groups these into categories so you can see where points were lost, not just how many. That breakdown matters more than the total.",
+        text: "Our [free ATS score checker](/) scores formatting, wording, structure and readability separately, so you can see where points were lost, not just how many. That breakdown matters more than the total. It does not compare your resume with a job posting, so check role-specific keywords yourself.",
       },
       { type: "h2", text: "What is a good ATS score?" },
       {
@@ -600,7 +600,7 @@ export const articles: Article[] = [
         head: ["Score range", "What it usually means", "What to do next"],
         rows: [
           ["80–100", "Clean structure, relevant keywords, strong bullets", "Tailor keywords for each job and apply"],
-          ["60–79", "Readable, but missing keywords or weak sections", "Fix the lowest-scoring category first"],
+          ["60–79", "Readable, but with weak wording or missing sections", "Fix the lowest-scoring category first"],
           ["40–59", "Likely parsing or structure problems", "Simplify layout, add standard headings"],
           ["Below 40", "Text may not be extracting correctly", "Rebuild in a single-column, text-based format"],
         ],
@@ -977,7 +977,7 @@ export const articles: Article[] = [
       {
         type: "ul",
         items: [
-          "Did the **keyword and skills** category improve compared with your generic version?",
+          "Does your **wording** score hold up after your edits? The checker does not read the job description, so compare the posting's key terms with your resume yourself.",
           "Is **formatting** still clean after your edits (no new tables, consistent dates)?",
           "Does the optional **AI analysis** flag skill gaps you could address truthfully, or weak bullets you missed?",
         ],

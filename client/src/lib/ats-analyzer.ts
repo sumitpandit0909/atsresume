@@ -22,7 +22,7 @@ const ACTION_VERBS = [
 ];
 
 // Common ATS-unfriendly formatting issues
-const PROBLEMATIC_CHARS = ['•', '→', '★', '●', '◆', '■'];
+const PROBLEMATIC_CHARS = ['→', '★', '◆', '■'];
 
 export function analyzeResume(text: string, fileName: string, fileSize: number): AnalysisResult {
   const suggestions: Suggestion[] = [];
@@ -422,7 +422,7 @@ function analyzeReadability(text: string, suggestions: Suggestion[]): number {
   }
   
   // Check for bullet points or list formatting
-  const hasBullets = /^[-*]\s/m.test(text) || /^\d+\.\s/m.test(text);
+  const hasBullets = /^\s*[-*•●]\s/m.test(text) || /^\s*\d+\.\s/m.test(text);
   if (!hasBullets) {
     score -= 20;
     suggestions.push({

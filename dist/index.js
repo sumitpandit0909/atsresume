@@ -503,7 +503,7 @@ function serveStatic(app2) {
   }
   app2.use(express.static(distPath));
   app2.use("*", (_req, res) => {
-    res.sendFile(path3.resolve(distPath, "index.html"));
+    res.status(404).sendFile(path3.resolve(distPath, "404.html"));
   });
 }
 

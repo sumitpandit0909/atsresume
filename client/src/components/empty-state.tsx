@@ -20,8 +20,8 @@ export function EmptyState() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4 w-full">
           <div className="flex flex-col items-center gap-2 p-4 bg-card border border-card-border rounded-lg">
             <Shield className="w-6 h-6 text-primary" />
-            <p className="text-xs font-medium text-foreground">100% Private</p>
-            <p className="text-xs text-muted-foreground">No data uploaded</p>
+            <p className="text-xs font-medium text-foreground">Browser-based</p>
+            <p className="text-xs text-muted-foreground">Basic score runs on your device</p>
           </div>
           
           <div className="flex flex-col items-center gap-2 p-4 bg-card border border-card-border rounded-lg">

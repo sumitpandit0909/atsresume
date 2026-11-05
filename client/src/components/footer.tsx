@@ -16,17 +16,17 @@ export default function Footer() {
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">ATS Resume Analyzer</h3>
-                <p className="text-gray-300 text-sm">AI-Powered Career Optimization</p>
+                <h3 className="text-xl font-bold">ATS Score Checker Free</h3>
+                <p className="text-gray-300 text-sm">Free Resume ATS Score Analysis</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Optimize your resume for ATS success with our AI-powered analysis tool. 
-              Get instant insights, industry alignment scores, and actionable improvement suggestions.
+              A free tool and guide library for finding common resume problems before you apply,
+              with no signup required.
             </p>
             <div className="flex items-center gap-2 text-gray-300">
               <Mail className="w-4 h-4" />
-              <span className="text-sm">support@atsanalyzer.com</span>
+              <span className="text-sm">its.sumitpandit@gmail.com</span>
             </div>
           </div>
 
@@ -72,6 +72,14 @@ export default function Footer() {
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   ATS Resume Guides
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -127,7 +135,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-300 text-sm">
-              © {currentYear} ATS Resume Analyzer. All rights reserved.
+              © {currentYear} ATS Score Checker Free. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-gray-300 text-sm">
               <Link 

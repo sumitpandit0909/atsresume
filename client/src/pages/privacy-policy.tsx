@@ -25,10 +25,10 @@ export default function PrivacyPolicy() {
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-bold text-gray-900 leading-tight">
-                  ATS Resume Analyzer
+                  ATS Score Checker Free
                 </h1>
                 <p className="text-xs lg:text-sm text-gray-600">
-                  AI-Powered Career Optimization
+                  Free Resume ATS Score Analysis
                 </p>
               </div>
             </Link>
@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-600 leading-relaxed">
-              Welcome to ATS Resume Analyzer ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered resume analysis service.
+              Welcome to ATS Score Checker Free ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered resume analysis service.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               By using our service, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not access or use our service.
@@ -82,6 +82,11 @@ export default function PrivacyPolicy() {
               <li><strong>Contact Information:</strong> Email address if you choose to contact us</li>
               <li><strong>Usage Data:</strong> Information about how you interact with our service</li>
             </ul>
+
+            <h3 className="text-xl font-medium text-gray-800 mb-3 mt-6">How your resume is processed</h3>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              The basic ATS score is calculated in your browser, so your file is not sent to our servers for that step. If you choose the optional AI analysis, the text extracted from your resume is sent through our server to our AI provider, OpenRouter, and the AI model it routes to, in order to generate your review. We do not save your resume on our servers, but those providers handle the text under their own policies. To limit AI requests, we temporarily process your IP address.
+            </p>
 
             <h3 className="text-xl font-medium text-gray-800 mb-3 mt-6">2.2 Automatically Collected Information</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -199,7 +204,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="w-4 h-4" />
-              <span className="text-sm">support@atsanalyzer.com</span>
+              <span className="text-sm">its.sumitpandit@gmail.com</span>
             </div>
           </section>
         </div>
